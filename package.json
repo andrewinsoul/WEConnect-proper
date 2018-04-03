@@ -1,0 +1,20 @@
+{
+  "name": "weconn-proper",
+  "version": "1.0.0",
+  "description": "refactor weconnect project to the right thing.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node ./app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  }
+}
