@@ -1,7 +1,7 @@
 import { users } from '../models/user';
 import { businesses } from '../models/business';
 
-export default class appMiddleware {
+export class appMiddleware {
   static userSignupMiddleware(req, res, next) {
     next();
   }
@@ -18,5 +18,17 @@ export default class appMiddleware {
   static removeBusinessMiddleware(req, res, next) {
     if (req.params.id > businesses.length) return res.status(404).send({ error: 'business not found' });
     return next();
+  }
+
+  static getAllBusinessMiddleware(req, res, next) {
+    if (req.query) next('route');
+  }
+
+  static businessByCategoryMiddleware(req, res, next) {
+    if (!Object.keys(req.query).includes('category')) next('route');
+  }
+
+  static businessByLocationMiddleware(req, res, next) {
+    if (!Object.keys(req.query).includes('location')) next('route');
   }
 }
