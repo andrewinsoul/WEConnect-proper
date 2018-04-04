@@ -7,6 +7,10 @@ module.exports = {
         "import/prefer-default-export": 0,
         "max-len": 0,
         "no-console": 0,
-         
+        "brace-style": 0,
+        "no-unused-vars": 0,
+        "no-restricted-syntax": 0,
+        "prefer-const": 0,
+         "": 0,
     }
 };
