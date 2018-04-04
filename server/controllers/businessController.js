@@ -29,7 +29,7 @@ export default class businessHandler {
   static removeBusiness(req, res) {
     const index = businesses.findIndex(item => item.id === Number(req.params.id));
     if (index !== -1) {
-      businesses.splice(index, 1)
+      businesses.splice(index, 1);
       for (let k = index; k < businesses.length; k += 1) {
         businesses[index].id -= 1;
       }
