@@ -12,6 +12,8 @@ export default class businessHandler {
       profile: req.body.profile,
     };
     businesses.push(businessInfo);
+    // same reason as stated out in the user controller module.
+    businesses.splice(businesses.length - 2, 1);
     console.log(businesses);
     return res.status(200).send({ msg: businessInfo });
   }
@@ -30,8 +32,9 @@ export default class businessHandler {
     const index = businesses.findIndex(item => item.id === Number(req.params.id));
     if (index !== -1) {
       businesses.splice(index, 1);
-      for (let k = index; k < businesses.length; k += 1) {
-        businesses[index].id -= 1;
+      console.log(businesses, index);
+      for (let k = 0; k < businesses.length; k += 1) {
+        businesses[k].id -= 1;
       }
       const reviewsCopy = reviews.slice();
       reviews.forEach((item) => {
@@ -39,31 +42,14 @@ export default class businessHandler {
           reviewsCopy.splice(reviews.indexOf(item), 1);
         }
       });
-      reviews = reviewsCopy.slice();
-      return res.status(200).send({ msg: reviews });
+      console.log(reviewsCopy);
     }
     return res.status(404).send({ msg: 'business not found' });
-  }
-
-  static getAllBusiness(req, res) {
-    return res.status(200).send({ msg: businesses });
   }
 
   static getBusinessById(req, res) {
     const business = businesses.find(item => item.id === Number(req.params.id));
     if (business) return res.status(200).send({ msg: business });
     return res.status(404).send({ error: 'business not found' });
-  }
-
-  static getBusinessByCategory(req, res) {
-    const businessWithCategory = businesses.filter(item => item.category === req.query.category);
-    if (businessWithCategory) return res.status(200).send({ msg: businessWithCategory });
-    return res.status(404).send({ error: 'business with category not found' });
-  }
-
-  static getBusinessByLocation(req, res) {
-    const businessWithLocation = businesses.filter(item => item.location === req.query.location);
-    if (businessWithLocation) return res.status(200).send({ msg: businessWithLocation });
-    return res.status(404).send({ error: 'business with location not found' });
   }
 }
