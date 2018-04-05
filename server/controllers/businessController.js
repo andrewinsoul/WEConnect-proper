@@ -32,17 +32,14 @@ export default class businessHandler {
     const index = businesses.findIndex(item => item.id === Number(req.params.id));
     if (index !== -1) {
       businesses.splice(index, 1);
-      console.log(businesses, index);
       for (let k = 0; k < businesses.length; k += 1) {
         businesses[k].id -= 1;
       }
-      const reviewsCopy = reviews.slice();
-      reviews.forEach((item) => {
-        if (item.businessId === Number(req.params.id)) {
-          reviewsCopy.splice(reviews.indexOf(item), 1);
-        }
-      });
-      console.log(reviewsCopy);
+      // reviews.forEach((item, index, array) => {
+      //   if (item.businessId === Number(req.params.id)) reviews.splice(index, 1);
+      //   if (reviews[index].businessId === Number(req.params.id)) reviews.splice(index, 1);
+      // });
+      return res.status(200).send({ msg: businesses });
     }
     return res.status(404).send({ msg: 'business not found' });
   }
