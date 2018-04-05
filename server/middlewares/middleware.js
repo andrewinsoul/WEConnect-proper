@@ -1,18 +1,11 @@
-import Joi from 'joi';
 import { users } from '../models/user';
 import { businesses } from '../models/business';
+import validator from '../validateFunction';
 
 export class appMiddleware {
   static userSignupMiddleware(req, res, next) {
-    const schema = {
-      name: Joi.string().required(),
-      email: Joi.string().required(),
-      password1: Joi.string().required(),
-      password2: Joi.string().required(),
-      username: Joi.string().required(),
-    };
-    const result = Joi.validate(req.body, schema);
-    if (result.error) return res.status(400).send(result.error.details[0].message);
+    const { error } = validator(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
     if (req.body.password1 !== req.body.password2) return res.status(406).send({ error: 'password mismatch' });
     const email = users.find(item => item.email === req.body.email);
     const username = users.find(item => item.username === req.body.username);
@@ -22,31 +15,20 @@ export class appMiddleware {
   }
 
   static userLoginMiddleware(req, res, next) {
-    const schema = {
-      email: Joi.string().required(),
-      password: Joi.string().required(),
-    };
-    const result = Joi.validate(req.body, schema);
-    if (result.error) return res.status(400).send(result.error.details[0].message);
+    const { error } = validator(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
     return next();
   }
 
   static addBusinessMiddleware(req, res, next) {
-    const schema = {
-      name: Joi.string().required(),
-      location: Joi.string().required(),
-      category: Joi.string().required(),
-      userId: Joi.string().required(),
-      profile: Joi.string().required(),
-    };
-    const result = Joi.validate(req.body, schema);
-    if (result.error) return res.status(400).send(result.error.details[0].message);
+    const { error } = validator(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
     if (req.body.userId > users.length) return res.status(404).send({ error: 'user not found' });
     return next();
   }
 
   static removeBusinessMiddleware(req, res, next) {
-    if (req.params.id > businesses.length) return res.status(404).send({ error: 'business not found' });  
+    if (req.params.id > businesses.length) return res.status(404).send({ error: 'business not found' });
     return next();
   }
 
@@ -74,14 +56,9 @@ export class appMiddleware {
   }
 
   static addBusinessReviewMiddleware(req, res, next) {
-    const schema = {
-      review: Joi.string().required(),
-      email: Joi.string().required(),
-      username: Joi.string().required(),
-      businessId: Joi.string().required(),
-    };
-    const result = Joi.validate(req.body, schema);
-    if (result.error) return res.status(400).send(result.error.details[0].message);
+    if (req.body.businessId > businesses.length) return res.status(404).send({ error: 'business not found' });
+    const { error } = validator(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
     return next();
   }
 }
