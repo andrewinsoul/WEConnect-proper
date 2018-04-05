@@ -8,7 +8,6 @@ const router = express.Router();
 
 router.post('/auth/signup', [appMiddleware.userSignupMiddleware], userHandler.signupUser);
 router.post('/auth/login', [appMiddleware.userLoginMiddleware], userHandler.loginUser);
-// router.post('/businesses/', [appMiddlewares.addBusinessMiddleware], businessController.addBusiness);
 router.put('/businesses/:id', businessHandler.updateProfile);
 router.delete('/businesses/:id', [appMiddleware.removeBusinessMiddleware], businessHandler.removeBusiness);
 router.get('/businesses/:id', businessHandler.getBusinessById);
