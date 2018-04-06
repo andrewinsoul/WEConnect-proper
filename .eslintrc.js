@@ -11,6 +11,10 @@ module.exports = {
         "no-unused-vars": 0,
         "no-restricted-syntax": 0,
         "prefer-const": 0,
+         "quotes": 0,
+         "no-undef": 0,
          "": 0,
+         
+         
     }
 };
