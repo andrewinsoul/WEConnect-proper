@@ -13,3 +13,4 @@ app.use('/api/v1', router);
 const PORT = parseInt(process.env.PORT, 10) || 8000;
 
 app.listen(PORT, () => console.log('server live on port 8000'));
+export default app;
