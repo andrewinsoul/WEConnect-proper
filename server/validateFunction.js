@@ -2,11 +2,11 @@ import Joi from 'joi';
 
 /**
 *
-* @param {Object} response
+* @param {Object} request
 */
-export default function validator(response) {
+export default function validator(request) {
   let schema;
-  if (Object.keys(response).includes('category')) {
+  if (Object.keys(request).includes('category')) {
     schema = {
       name: Joi.string().required(),
       location: Joi.string().required(),
@@ -15,7 +15,7 @@ export default function validator(response) {
       profile: Joi.string().required(),
     };
   }
-  else if (Object.keys(response).includes('password1')) {
+  else if (Object.keys(request).includes('password1')) {
     schema = {
       name: Joi.string().required(),
       email: Joi.string().email().required(),
@@ -24,13 +24,13 @@ export default function validator(response) {
       username: Joi.string().required(),
     };
   }
-  else if (Object.keys(response).length === 2 && Object.keys(response).includes('email')) {
+  else if (Object.keys(request).length === 2 && Object.keys(request).includes('email') && Object.keys(request).includes('password')) {
     schema = {
       email: Joi.string().email().required(),
       password: Joi.string().required(),
     };
   }
-  else if (Object.keys(response).includes('review')) {
+  else if (Object.keys(request).includes('review')) {
     schema = {
       review: Joi.string().required(),
       email: Joi.string().email().required(),
@@ -38,5 +38,8 @@ export default function validator(response) {
       businessId: Joi.number().integer().required(),
     };
   }
-  return Joi.validate(response, schema);
+  else {
+    return 'was not validated by joi...';
+  }
+  return Joi.validate(request, schema);
 }

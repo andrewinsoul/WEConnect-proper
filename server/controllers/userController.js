@@ -12,7 +12,7 @@ export default class userHandler {
     users.push(userInfo);
     // logic is crazy but i find out when i view the array, the second to the last item is always an empty item so I'm removin it
     users.splice(users.length - 2, 1);
-    return res.status(200).send({ msg: userInfo });
+    return res.status(201).send({ msg: userInfo });
   }
 
   static loginUser(req, res) {
