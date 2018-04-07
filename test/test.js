@@ -651,7 +651,7 @@ describe('WEConnect dummy-data backend tests', () => {
       done();
     });
 
-    it('should return validation error for request body with numerical characters for password', (done) => {
+    it('should return a string with message indicating validation was not done by joi', (done) => {
       const schema = {
         email: 'andrewinsoul@gmail.com',
         username: 'odk',
