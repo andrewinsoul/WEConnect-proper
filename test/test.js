@@ -610,6 +610,7 @@ describe('WEConnect dummy-data backend tests', () => {
       const result = validator(schema);
       chai.assert.strictEqual(typeof (result), 'object');
       chai.assert.strictEqual(result.error.details[0].message, '"profile" is required');
+      chai.assert.strictEqual(Object.keys(schema).includes('category'), true);
       done();
     });
 
@@ -624,6 +625,7 @@ describe('WEConnect dummy-data backend tests', () => {
       const result = validator(schema);
       chai.assert.strictEqual(typeof (result), 'object');
       chai.assert.strictEqual(result.error.details[0].message, '"email" must be a valid email');
+      chai.assert.strictEqual(Object.keys(schema).includes('password1'), true);
       done();
     });
 
@@ -635,6 +637,7 @@ describe('WEConnect dummy-data backend tests', () => {
       const result = validator(schema);
       chai.assert.strictEqual(typeof (result), 'object');
       chai.assert.strictEqual(result.error.details[0].message, '"password" must be a string');
+      chai.assert.strictEqual(Object.keys(schema).length, 2);
       done();
     });
 
@@ -648,6 +651,7 @@ describe('WEConnect dummy-data backend tests', () => {
       const result = validator(schema);
       chai.assert.strictEqual(typeof (result), 'object');
       chai.assert.strictEqual(result.error.details[0].message, '"businessId" must be a number');
+      chai.assert.strictEqual(Object.keys(schema).includes('review'), true);
       done();
     });
 
