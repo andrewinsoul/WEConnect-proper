@@ -263,6 +263,7 @@ describe('WEConnect dummy-data backend tests', () => {
         })
         .end((err, res) => {
           expect(res).to.have.status(201);
+          expect(businesses.length).to.eql(4);
           expect(res.body).to.have.property('msg');
           expect(res.body.msg).to.eql({
             id: businesses.length,
@@ -301,6 +302,8 @@ describe('WEConnect dummy-data backend tests', () => {
         .end((err, res) => {
           expect(res).to.have.status(200);
           expect(res.body).to.have.property('msg');
+          expect(businesses.length).to.eql(3);
+          expect(businesses[2].id).to.eql(3);
           expect(res.body.msg).to.eql({
             id: 4,
             name: 'GUO group of transports',
@@ -610,7 +613,6 @@ describe('WEConnect dummy-data backend tests', () => {
       const result = validator(schema);
       chai.assert.strictEqual(typeof (result), 'object');
       chai.assert.strictEqual(result.error.details[0].message, '"profile" is required');
-      chai.assert.strictEqual(Object.keys(schema).includes('category'), true);
       done();
     });
 
@@ -625,7 +627,6 @@ describe('WEConnect dummy-data backend tests', () => {
       const result = validator(schema);
       chai.assert.strictEqual(typeof (result), 'object');
       chai.assert.strictEqual(result.error.details[0].message, '"email" must be a valid email');
-      chai.assert.strictEqual(Object.keys(schema).includes('password1'), true);
       done();
     });
 
@@ -637,7 +638,6 @@ describe('WEConnect dummy-data backend tests', () => {
       const result = validator(schema);
       chai.assert.strictEqual(typeof (result), 'object');
       chai.assert.strictEqual(result.error.details[0].message, '"password" must be a string');
-      chai.assert.strictEqual(Object.keys(schema).length, 2);
       done();
     });
 
@@ -651,7 +651,6 @@ describe('WEConnect dummy-data backend tests', () => {
       const result = validator(schema);
       chai.assert.strictEqual(typeof (result), 'object');
       chai.assert.strictEqual(result.error.details[0].message, '"businessId" must be a number');
-      chai.assert.strictEqual(Object.keys(schema).includes('review'), true);
       done();
     });
 
