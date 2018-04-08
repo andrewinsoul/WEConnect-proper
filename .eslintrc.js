@@ -13,7 +13,9 @@ module.exports = {
         "prefer-const": 0,
          "quotes": 0,
          "no-undef": 0,
-         "": 0,
+         "linebreak-style": 0,
+         "":0,
+
          
          
     }
