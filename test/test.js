@@ -263,6 +263,7 @@ describe('WEConnect dummy-data backend tests', () => {
         })
         .end((err, res) => {
           expect(res).to.have.status(201);
+          expect(businesses.length).to.eql(4);
           expect(res.body).to.have.property('msg');
           expect(res.body.msg).to.eql({
             id: businesses.length,
@@ -301,6 +302,8 @@ describe('WEConnect dummy-data backend tests', () => {
         .end((err, res) => {
           expect(res).to.have.status(200);
           expect(res.body).to.have.property('msg');
+          expect(businesses.length).to.eql(3);
+          expect(businesses[2].id).to.eql(3);
           expect(res.body.msg).to.eql({
             id: 4,
             name: 'GUO group of transports',
