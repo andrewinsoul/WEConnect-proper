@@ -3,7 +3,7 @@ node_js:
   - "stable"
 cache: bundler
 before_script:
-  -npm install --save coveralls
+  -npm install coveralls --save
 script: npm test
 after_success:
   - npm run coverage
