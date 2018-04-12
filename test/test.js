@@ -601,6 +601,41 @@ describe('WEConnect dummy-data backend tests', () => {
     });
   });
 
+  describe('test for getBusinessReview controller', () => {
+    it('should return code 200 with a json response of review', (done) => {
+      server
+        .get('/api/v1/businesses/reviews/1')
+        .send({ })
+        .end((err, res) => {
+          expect(res).to.have.status(200);
+          expect(res.body).to.have.property('msg');
+          expect(res.body.msg).to.eql([
+            {
+              id: 1,
+              businessId: 1,
+              review: "keep it up",
+              username: "Annie",
+              email: "annie@gmail.com",
+            },
+            {
+              id: 2,
+              businessId: 1,
+              review: "Push Harder",
+              username: "Andy",
+              email: "andrewinsoul@gmail.com",
+            },
+            {
+              id: 4,
+              businessId: 1,
+              review: "more work needs to be done on your delivery team",
+              username: "andrew",
+              email: "andrewinsoul@gmail.com",
+            },
+          ]);
+          done();
+        });
+    });
+  });
 
   describe('tests for validator function', () => {
     it('should return validation error for request body without profile', (done) => {
