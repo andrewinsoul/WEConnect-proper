@@ -27,9 +27,6 @@ export default class businessHandler {
     const index = businesses.findIndex(item => item.id === Number(req.params.id));
     const business = businesses[index];
     businesses.splice(index, 1);
-    for (let k = index; k < businesses.length; k += 1) {
-      businesses[k].id -= 1;
-    }
     return res.status(200).send({ msg: business });
   }
 

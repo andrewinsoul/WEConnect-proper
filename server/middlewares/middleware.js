@@ -33,7 +33,8 @@ export class appMiddleware {
   }
 
   static removeBusinessMiddleware(req, res, next) {
-    if (req.params.id > businesses.length) return res.status(404).send({ error: 'business not found' });
+    const businessIndex = businesses.findIndex(index => index.id === Number(req.params.id));
+    if (businessIndex === -1) return res.status(404).send({ error: 'business not found' });
     return next();
   }
 
