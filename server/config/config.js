@@ -1,8 +1,8 @@
-const dotenv = require('dotenv');
+import { config } from 'dotenv';
 
-dotenv.config();
+config();
 
-module.exports = {
+export const dbConfig = {
   development: {
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
