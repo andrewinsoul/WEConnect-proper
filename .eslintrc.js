@@ -14,6 +14,7 @@ module.exports = {
         "no-plusplus": 0,
         "no-continue": 0,
         "consistent-return": 0,
+        "linebreak-style": 0,
         
         
         
