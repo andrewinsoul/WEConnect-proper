@@ -20,8 +20,11 @@ export const userHandler = {
       })
       .then((user) => {
         const myToken = jwt.sign(
-          { id: user.id },
-          key, {
+          {
+            id: user.id,
+          },
+          key,
+          {
             expiresIn: 86400,
           },
         );

@@ -6,5 +6,5 @@ import { validateUserResource } from '../validateFunction';
 export const userRouter = express.Router();
 
 userRouter
-  .post('/auth/signup', [validateUserResource, appMiddlewares.addUserMiddleware, userHandler.createUser])
-  .post('/auth/login', [validateUserResource, userHandler.loginUser]);
+  .post('/signup', [validateUserResource, appMiddlewares.addUserMiddleware, userHandler.createUser])
+  .post('/login', [validateUserResource, userHandler.loginUser]);

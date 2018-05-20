@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 
 dotenv.load();
 const key = process.env.JWT_SECRET_KEY;
-
 /**
  * @class appMiddlewares
  */
@@ -23,7 +22,7 @@ export class appMiddlewares {
       key, (err, decoded) => {
         if (err) return res.status(401).send({ auth: false, msg: 'Failed to authenticate token' });
         req.userId = decoded.id;
-        return next();
+        next();
       },
     );
   }

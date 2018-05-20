@@ -11,8 +11,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(ExpressValidator());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use('/api/v1/auth', userRouter);
 app.use('/api/v1', businessRouter);
 app.use('/api/v1', reviewRouter);
-app.use('/api/v1', userRouter);
 
 export default app;

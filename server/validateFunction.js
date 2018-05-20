@@ -17,6 +17,9 @@ export function validateUserResource(req, res, next) {
     req.checkBody('email', 'email is required and should be valid').notEmpty().isEmail();
     req.checkBody('password', 'password is required').notEmpty();
   }
+  else if (req.url === '/businesses' && req.method === 'POST') {
+    req.checkBody('userId', 'userId is required and should be an integer').notEmpty().isInt();
+  }
   else if (req.method === 'GET') {
     req.checkParams('id', 'Must be valid').notEmpty().isInt();
   }
