@@ -8,6 +8,7 @@ module.exports = {
     "rules": {
         "arrow-body-style": 0,
         "import/prefer-default-export": 0,
+        "no-console": 0,
         "brace-style": 0,
         "import/no-named-as-default-member": 0,
         "quotes": 0,
