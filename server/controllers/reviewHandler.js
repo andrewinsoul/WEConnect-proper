@@ -49,6 +49,7 @@ export const reviewHandler = {
           return res.status(200).send({ msg: resultObject });
         }
         return res.status(res.status(404).send({ error: 'not found' }));
-      });
+      })
+      .catch(error => res.status(500).send({ error }));
   },
 };

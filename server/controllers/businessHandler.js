@@ -45,7 +45,8 @@ export const businessHandler = {
       .then((deletedBusiness) => {
         if (deletedBusiness) return res.status(200).send({ msg: 'Business successfully deleted' });
         return res.status(404).send({ error: 'business not found' });
-      });
+      })
+      .catch(error => res.status(500).send({ error }));
   },
 
   getOneBusiness(req, res) {
@@ -79,7 +80,8 @@ export const businessHandler = {
           return res.status(200).send({ msg: resultObject });
         }
         return res.status(404).send({ error: 'business not found' });
-      });
+      })
+      .catch(error => res.status(500).send({ error }));
   },
 
   getAllBusinesses(req, res, next) {
@@ -110,7 +112,8 @@ export const businessHandler = {
           );
         });
         return res.status(200).send({ msg: resultObject });
-      });
+      })
+      .catch(error => res.status(500).send({ error }));
   },
 
   getBusinessesByLocation(req, res) {
@@ -124,7 +127,8 @@ export const businessHandler = {
         .then((result) => {
           if (result.length) return res.status(200).send({ msg: result });
           if (!result.length) return res.status(404).send({ error: 'business with location not found' });
-        });
+        })
+        .catch(error => res.status(500).send({ error }));
     }
     return res.status(400).send({ error: 'Bad Request' });
   },
@@ -140,7 +144,8 @@ export const businessHandler = {
       .then((result) => {
         if (result.length) return res.status(200).send({ msg: result });
         if (!result.length) return res.status(404).send({ error: 'business with category not found' });
-      });
+      })
+      .catch(error => res.status(500).send({ error }));
   },
 
   updateBusinessProfile(req, res) {
@@ -158,6 +163,7 @@ export const businessHandler = {
       .then((result) => {
         if (result[0]) return res.status(200).send({ msg: 'profile succesfully updated' });
         return res.status(404).send({ error: 'business not found' });
-      });
+      })
+      .catch(error => res.status(500).send({ error }));
   },
 };

@@ -29,6 +29,12 @@ export const userHandler = {
           },
         );
         return res.status(201).send({ auth: true, token: myToken });
+      })
+      .catch((error) => {
+        if (error.name === "SequelizeUniqueConstraintError") {
+          if (error.errors[0].message.includes('username')) return res.status(409).send({ error: 'username already taken' });
+          return res.status(409).send({ error: 'email already exists' });
+        }
       });
   },
 
@@ -53,6 +59,7 @@ export const userHandler = {
           },
         );
         return res.status(200).send({ auth: true, token: myToken });
-      });
+      })
+      .catch(error => res.status(500).send({ error }));
   },
 };
