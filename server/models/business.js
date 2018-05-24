@@ -32,7 +32,6 @@ const businessModel = (sequelize, DataTypes) => {
   Business.associate = (models) => {
     Business.hasMany(models.Review, {
       foreignKey: 'businessId',
-      as: 'rev',
     });
     Business.belongsTo(models.User, {
       foreignKey: 'userId',

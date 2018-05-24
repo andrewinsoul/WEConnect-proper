@@ -30,7 +30,7 @@ export const userHandler = {
         );
         return res.status(201).send({ auth: true, token: myToken });
       })
-      .catch(error => res.status(409).send({ error: error }));
+      // .catch(error => res.status(409).send({ error }));
   },
 
   loginUser(req, res) {
@@ -55,7 +55,7 @@ export const userHandler = {
         );
         return res.status(200).send({ auth: true, token: myToken });
       })
-      .catch(error => res.status(412).send(error));
+      // .catch(error => res.status(412).send(error));
   },
 
 };
