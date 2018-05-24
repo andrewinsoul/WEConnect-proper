@@ -11,8 +11,6 @@ const env = process.env.NODE_ENV || 'development';
 const configEnv = dbConfig[env];
 export const db = {};
 
-console.log(env);
-
 let sequelize;
 if (configEnv.use_env_variable) {
   sequelize = new Sequelize(process.env[configEnv.use_env_variable]);
