@@ -3,9 +3,12 @@ node_js:
   - stable
 services:
   - postgresql
+before_script:
+  - npm i -D coveralls
 script:
   - npm run test
 after_success:
   - npm run coverage
+  - npm run report-coverage
 env:
   global:
