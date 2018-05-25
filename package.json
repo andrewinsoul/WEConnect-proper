@@ -29,7 +29,8 @@
     "localTest": "cross-env NODE_ENV=localTest nyc mocha ./test --compilers js:babel-core/register --timeout 15000 --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
-    "start": "nodemon --exec babel-node ./server/bin/www"
+    "start": "nodemon --exec babel-node ./server/bin/www",
+    "test": "cross-env NODE_ENV=localTest nyc mocha ./test --compilers js:babel-core/register --timeout 15000 --exit"
   },
   "repository": {
     "type": "git",
