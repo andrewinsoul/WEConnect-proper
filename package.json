@@ -26,7 +26,7 @@
   },
   "scripts": {
     "pre-localTest": "sequelize db:migrate:undo:all --env localTest && sequelize db:migrate --env localTest && cls",
-    "localTest": "cross-env NODE_ENV=localTest nyc mocha ./test --compilers js:babel-core/register --timeout 15000 --exit",
+    "localTest": "cross-env NODE_ENV=localTest && sequelize db:migrate && nyc mocha ./test --compilers js:babel-core/register --timeout 15000 --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "start": "nodemon --exec babel-node ./server/bin/www",
