@@ -5,6 +5,8 @@ cache: bundler
 services:
   - postgresql
 before_script:
+  - npm i -D sequelize
+  - npm run pre-localTest
   - npm i -D coveralls
 script:
   - npm run test
