@@ -13,4 +13,4 @@ after_success:
   - npm run report-coverage
 env:
   global:
-    - NODE_ENV=localTest
+    - NODE_ENV=test
