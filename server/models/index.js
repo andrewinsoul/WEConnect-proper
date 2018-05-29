@@ -8,12 +8,13 @@ config();
 
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
+console.log(env);
 const configEnv = dbConfig[env];
 export const db = {};
 
 let sequelize;
 if (configEnv.use_env_variable) {
-  sequelize = new Sequelize(process.env[configEnv.use_env_variable]);
+  sequelize = new Sequelize(configEnv.use_env_variable);
 }
 else {
   sequelize = new Sequelize(configEnv.database, configEnv.username, configEnv.password, configEnv);
