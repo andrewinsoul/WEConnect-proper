@@ -5,6 +5,7 @@ cache: bundler
 services:
   - postgresql
 before_script:
+  - npm install -g sequelize-cli
   - sequelize db:migrate
   - npm i -D coveralls
 script:
