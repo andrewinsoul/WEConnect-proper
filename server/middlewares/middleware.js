@@ -16,11 +16,11 @@ export class appMiddlewares {
    */
   static verifyToken(req, res, next) {
     const myToken = req.headers['x-access-token'] || req.query.token || req.body.token;
-    if (!myToken) return res.status(403).send({ auth: false, msg: 'No token provided' });
+    if (!myToken) return res.status(403).send({ auth: false, error: 'No token provided' });
     jwt.verify(
       myToken,
       key, (err, decoded) => {
-        if (err) return res.status(401).send({ auth: false, msg: 'Failed to authenticate token' });
+        if (err) return res.status(401).send({ auth: false, error: 'Failed to authenticate token' });
         req.userId = decoded.id;
         next();
       },

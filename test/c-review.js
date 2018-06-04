@@ -59,6 +59,20 @@ describe('WEconnect API testing for the review model', () => {
         });
     });
 
+    it('should status code 404 with error msg business not found', (done) => {
+      server
+        .get('/api/v1/reviews/122')
+        .send({
+          token: validToken,
+        })
+        .end((err, res) => {
+          expect(res).to.have.status(404);
+          expect(res.body).to.have.property('error');
+          expect(res.body.error).to.eql('not found');
+          done();
+        });
+    });
+
     it('should return error code with message business not found', (done) => {
       server
         .get('/api/v1/reviews/2')

@@ -21,7 +21,7 @@ describe('WEconnect API testing-user', () => {
         .end((err, res) => {
           expect(res).to.have.status(409);
           expect(res.body).to.have.property('error');
-          expect(res.body.error);
+          expect(res.body.error).to.eql('password mismatch');
           done();
         });
     });
@@ -39,6 +39,42 @@ describe('WEconnect API testing-user', () => {
         .end((err, res) => {
           expect(res).to.have.status(201);
           expect(res.body).to.have.property('token');
+          done();
+        });
+    });
+
+    it('should return status code indicating conflict with error message email already exists', (done) => {
+      server
+        .post('/api/v1/auth/signup')
+        .send({
+          name: 'Veronica Okoye',
+          email: 'azuka60@gmail.com',
+          password1: 'chinecherem',
+          password2: 'chinecherem',
+          username: 'vera',
+        })
+        .end((err, res) => {
+          expect(res).to.have.status(409);
+          expect(res.body).to.have.property('error');
+          expect(res.body.error).to.eql('email already exists');
+          done();
+        });
+    });
+
+    it('should return status code indicating conflict with error message email already exists', (done) => {
+      server
+        .post('/api/v1/auth/signup')
+        .send({
+          name: 'Veronica Okoye',
+          email: 'azukavera60@gmail.com',
+          password1: 'chinecherem',
+          password2: 'chinecherem',
+          username: 'vera',
+        })
+        .end((err, res) => {
+          expect(res).to.have.status(409);
+          expect(res.body).to.have.property('error');
+          expect(res.body.error).to.eql('username already taken');
           done();
         });
     });

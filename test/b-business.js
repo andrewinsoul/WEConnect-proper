@@ -156,6 +156,47 @@ describe('WEconnect API testing for the business model', () => {
     });
   });
 
+  describe('tests for invalid authentication', () => {
+    it('should status code 403 with error message No token provided', (done) => {
+      server
+        .post('/api/v1/businesses')
+        .send({
+          name: 'Andela-javascript',
+          address: '999c Illupeju Road, Ikorodu',
+          location: 'Lagos',
+          category: 'Sports',
+          profile: 'unbelievably crazy',
+          userId: 12,
+        })
+        .end((err, res) => {
+          expect(res).to.have.status(403);
+          expect(res.body).to.have.property('error');
+          expect(res.body.error).to.eql('No token provided');
+          done();
+        });
+    });
+
+    it('should status code 401 with error message Failed to authenticate token', (done) => {
+      server
+        .post('/api/v1/businesses')
+        .send({
+          name: 'Andela-javascript',
+          address: '999c Illupeju Road, Ikorodu',
+          location: 'Lagos',
+          category: 'Sports',
+          profile: 'unbelievably crazy',
+          token: 'crazy token',
+          userId: 12,
+        })
+        .end((err, res) => {
+          expect(res).to.have.status(401);
+          expect(res.body).to.have.property('error');
+          expect(res.body.error).to.eql('Failed to authenticate token');
+          done();
+        });
+    });
+  });
+
   describe('tests for getting a business', () => {
     it('should return status code 404 with error message business not found', (done) => {
       server

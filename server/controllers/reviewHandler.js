@@ -14,7 +14,7 @@ export const reviewHandler = {
       .then(() => res.status(201).send({ msg: 'review successfully posted' }))
       .catch((error) => {
         if (error.name === "SequelizeForeignKeyConstraintError") return res.status(404).send({ error: 'business not found' });
-        return res.status(500).send({ error: 'Database Error' });
+        // return res.status(500).send({ error: 'Database Error' });
       });
   },
 
@@ -49,7 +49,7 @@ export const reviewHandler = {
           return res.status(200).send({ msg: resultObject });
         }
         return res.status(res.status(404).send({ error: 'not found' }));
-      })
-      .catch(error => res.status(500).send({ error }));
+      });
+    // .catch(error => res.status(500).send({ error }));
   },
 };
