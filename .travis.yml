@@ -10,7 +10,7 @@ before_script:
   - sequelize db:migrate
   - npm i -D coveralls 
 script:
-  - npm run test
+  - npm run localTest
 after_success:
   - npm run coverage
   - npm run report-coverage
