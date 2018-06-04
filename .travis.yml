@@ -5,7 +5,8 @@ services:
   - postgresql
 before_script:
   - npm i -g sequelize
-  - sequelize db:create weconn-test
+  - psql -c "CREATE DATABASE weconn-test;" -U postgres
+  #- psql -c "CREATE USER foo WITH PASSWORD 'bar';" -U postgres
   - sequelize db:migrate
   - npm i -D coveralls 
 script:
