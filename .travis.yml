@@ -1,14 +1,13 @@
 language: node_js
 node_js:
   - "stable"
-cache: bundler
 services:
   - postgresql
 before_script:
-  - npm install -g sequelize-cli
-  - psql -c 'create database travis_ci_test;' -U postgres
+  - npm i -g sequelize
+  - sequelize db:create weconn-test
   - sequelize db:migrate
-  - npm i -D coveralls
+  - npm i -D coveralls 
 script:
   - npm run test
 after_success:
