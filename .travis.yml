@@ -5,7 +5,7 @@ services:
   - postgresql
 before_script:
   - npm i -g sequelize-cli
-  - psql -c "CREATE DATABASE Database4Test;" -U postgres
+  - psql -c "CREATE DATABASE weconn_test;" -U postgres
   - psql -c "CREATE USER andrew WITH PASSWORD 'postgres';" -U postgres
   - sequelize db:migrate
   - npm i -D coveralls 
