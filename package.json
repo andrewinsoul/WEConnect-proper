@@ -9,7 +9,7 @@
     "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "report-coverage": "cat ./coverage/lcov.info | coveralls"
   },
-  "keywords": [],
+  "keywords": ["Andrew"],
   "author": "",
   "license": "ISC",
   "dependencies": {
