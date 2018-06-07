@@ -14,6 +14,10 @@ const businessModel = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    businessPhoto: {
+      type: DataTypes.STRING.BINARY,
+      allowNull: false,
+    },
     location: {
       type: DataTypes.STRING,
       allowNull: false,
