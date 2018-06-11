@@ -15,10 +15,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      businessPhoto: {
-        type: Sequelize.STRING.BINARY,
-        allowNull: false,
-      },
+      // businessPhoto: {
+      //   type: Sequelize.STRING.BINARY,
+      //   allowNull: false,
+      // },
       location: {
         type: Sequelize.STRING,
         allowNull: false,
