@@ -1,0 +1,92 @@
+body {
+  font-size: 20px;
+}
+nav.xnav {
+  position: fixed; 
+  z-index: 1; 
+  width: 100%; 
+  top: 0;
+}
+.business-details {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 6px solid transparent; 
+  border-radius: 8px; 
+  color: darkcyan; 
+  margin: 2%;
+}
+.review-body {
+  position: relative;
+  background: #e4e3e3;
+  color: #000000;
+  padding: 15px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.review-body:before, .review-body:after { 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  position: absolute; 
+  top: 30px;
+  left: -20px;
+  content: '';
+  border: 10px solid transparent;
+  border-right-color: #e4e3e3;
+}
+/* review the above styles in more depth at your lesuire credit goes to ClintFidel, his work gave me much inspiration to build mine */
+.btn-success {
+  background-color: darkgreen;
+}
+span.modal-close-btn {
+  color: white; 
+}
+.modal-header-btn {
+  border-radius: 4px;
+  margin-top: 1px; 
+  padding: 3px; 
+  background-color: red;
+}
+.edit-profile-modal {
+  max-width: 70%;
+  margin-top: 4%;
+  margin-left: 16%;
+}
+.form-control {
+  border: 1px solid grey;
+}
+.modal-header {
+  /* background-color: rebeccapurple; */
+  color: whitesmoke;
+  /* font-size: 20px; */
+  padding: 1%;
+}
+.figure-img {
+  height: 30%; 
+  width: 100%; 
+  border-radius: 8px;
+}
+figcaption {
+  color: darkcyan; 
+  font-weight: bold; 
+  /* font-size: 24px; */
+}
+span.modal-title {
+  font-size: 24px;
+}
+span.modal-title {
+  margin-right: 12cm;
+}
+label {
+  font-size: 15px;
+}
+@media screen and (max-width: 575px) {
+  div.img-row {
+    padding-top: 60px;
+  }
+  span.modal-title {
+    margin-right: 50px;
+  }
+  button.edit-btn {
+    margin-left: 50px;
+    margin-right: 5px;
+  }
+}

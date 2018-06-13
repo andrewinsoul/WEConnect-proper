@@ -1,0 +1,22 @@
+button.modal-header-btn {
+  background-color: red; 
+  padding: 2px; 
+  margin-top: 1px; 
+  border-radius: 4px;
+}
+div.nav-div {
+  position: fixed; 
+  width: 100%; 
+  z-index: 1;
+}
+h3.navbar-brand {
+  color: white;
+}
+.form-control {
+  border: 1px solid grey;
+}
+@media screen and (max-width: 575px) {
+  div.jumbotron {
+    margin-top: 65px;
+  }
+}

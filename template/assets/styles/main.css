@@ -1,4 +1,109 @@
 body {
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+}
+
+.section-one {
+  position: relative;
+  overflow: hidden;
+  color: whitesmoke;
+}
+
+div.signup-login {
+  margin: 1%;
+}
+
+div.section-one img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.section-one div.row {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+a {
+  color: whitesmoke;
+}
+
+nav.xnav {
+  background-color: #007bff;
+}
+
+.signup-login {
+  margin-top: 1%;
+}
+
+.form-input {
+  border: 1px solid green;
+}
+
+img.logo {
+  width: 60px;
+}
+
+figure {
+  margin-top: 15%;
+}
+
+img.index {
+  width: 100%;
+  padding: 0;
+}
+
+.brand-anchor {
+  color: whitesmoke;
+}
+
+.section-one {
+  padding: 5%;
+}
+
+.contact-us img {
+  padding: 0;
+  transition: .5s;
+  width: 40px;
+}
+.contact-us img:hover {
+  transform: scale(1.2) rotate(360deg);
+}
+
+footer {
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.dashbard {
+  width: 100%;
+  border-bottom: white solid 3px;
+}
+
+.dropdown-link {
+  color: blueviolet;
+  margin-left: 13px;
+  margin-right: 13px;
+  font-size: 100%;
+}
+
+.image-wrapper img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 150%;
+  border-radius: 100px;
+}
+
+
+
+/* body {
   background-color: rgba(245, 245, 245, 0.6);
   font-size: 18px;
 }
@@ -11,22 +116,22 @@ div.signup-login {
   margin: 1%;
 }
 div.section-one img {
-  /* img { */
+   img { 
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-  /* } */
+   } 
 }
 div.section-one div.row {
-  /* div.row { */
+   div.row { 
     position: relative;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.8);
     padding-top: 4%;
     padding-bottom: 4%;
-  /* } */
+   } 
 }
 a {
   color: whitesmoke;
@@ -57,14 +162,14 @@ img.index {
   padding: 5%
 }
 .contact-us img {
-  /* img { */
+   img { 
     padding:0;
     transition: .5s;
     width: 40px;
-    /* &:hover { */
-      /* transform: scale(1.2) rotate(360deg); */
-    /* } */
-  /* }   */
+     &:hover { 
+       transform: scale(1.2) rotate(360deg); 
+     } 
+   }   
 }
 footer {
   padding: 10px; 
@@ -87,4 +192,4 @@ footer {
   width: 100%;
   height: 150%; 
   border-radius: 100px;
-}
+} */
