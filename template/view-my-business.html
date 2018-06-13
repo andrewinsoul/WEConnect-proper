@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Business Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./assets/dist/view-my-business.css"/>
+  </head>
+  <body>
+    <nav class="xnav navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; z-index: 1; width: 100%; top: 0;">
+      <div class="container-fluid">
+        <h3 style="color: white;" class="navbar-brand">
+          <img class="rounded-circle" src="./assets/images/weconnect-logo.png" style="width: 48px;" alt="logo"/>
+          WEconnect
+        </h3>
+        <button class="navbar-toggler" type="menu" data-toggle="collapse" aria-controls="navDropdown" aria-expanded="false" aria-label="Toggle Navigation" data-target="#Dropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end brand-anchor" id="Dropdown">
+          <ul class="navbar-nav">
+            <li>
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>            
+            <li class="dropdown active">
+              <a class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Businesses</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-link dropdown-item" href="business-catalogue.html">Business Catalogue</a>
+                <a class="dropdown-link dropdown-item" href="my-businesses.html">My Businesses</a>
+                <a class="dropdown-link dropdown-item" href="register-business.html">Register Business</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="reviews.html">Reviews</a>
+            </li>
+            <li>
+              <a class="nav-link" href="reviews.html">Profile</a>
+            </li>
+            <li>
+              <a class="nav-link" href="login.html">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid" style="margin-top: 9%">
+      <div class="row img-row">
+        <div class=" col-md-10 offset-md-1 col-sm-12">
+          <figure class="text-center" style="margin: 2%">
+            <img class="img-fluid figure-img" src="file:///C:/Users/user/Desktop/WECONNECT/template/assets/images/car%20dashboard.png"/>
+            <figcaption>
+              <span style="margin-right: 10%;">Business Info</span>
+              <span>Reviews</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 offset-md-1 col-sm-12">
+          <div class="jumbotron-fluid business-details">
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <h3 style="color: darkcyan;">
+                  <span style="border-bottom: 3px solid darkcyan;">Business-Info</span>
+                </h3>
+              </div>
+            </div>
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <span style="font-weight: bold;">NAME: </span>Andy Software Corporation
+              </div>
+            </div>
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <span style="font-weight: bold;">ADDRESS: </span>11c Oxford Street Ikoyi
+              </div>
+            </div>
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <span style="font-weight: bold;">LOCATION: </span>Lagos
+              </div>
+            </div>
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <span style="font-weight: bold;">CATEGORY: </span>TECHNOLOGY
+              </div>
+            </div>
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <span style="font-weight: bold;">DETAILS: </span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem cum optio eveniet, quae est modi provident beatae maxime magnam veniam similique quasi mollitia accusantium. Dolor provident assumenda ab facilis rem!
+              </div>
+            </div>
+            <div class="row">
+              <div class="col offset-md-3">
+                <button class="edit-btn" data-toggle="modal" data-target="#edit-business-profile"> 
+                  <img style="width: 50px;" src="./assets/images/edit-icon.png"/>
+                </button>
+                <div class="modal fade" id="edit-business-profile">
+                  <div class="modal-dialog edit-profile-modal">
+                    <div class="modal-content">
+                      <div class="modal-header bg-dark">
+                        <h3 style="color: white">
+                          <span class="modal-title">Edit Business Profile</span>
+                          <button class="modal-header-btn" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="modal-close-btn" aria-hidden="true">&times;</span>
+                          </button>
+                        </h3>
+                      </div>
+                      <div class="modal-body">
+                        <form action="/">
+                          <div class="" style="margin: 1%">
+                            <div class="form-group">
+                              <label for="businessname">Business Name</label>
+                              <input id="businessname" class="form-control col-10" placeholder="Andy Software Corporation"/>
+                            </div>
+                            <div style="margin-top: 3%" class="form-group">
+                              <label for="businessaddress">Business Address</label>
+                              <input class="form-control col-10" id="businessaddress" placeholder="11c Oxford Street Ikoyi"/>
+                            </div>
+                            <div style="margin-top: 3%" class="form-group">
+                              <label for="businessstate">Business State</label>
+                              <select id="businessstate" class="form-control col-10">
+                                <option>Abia</option>
+                                <option>Akwa-Ibom</option>
+                                <option>Anambra</option>
+                                <option>Bauchi</option>
+                                <option>Kano</option>
+                                <option>Kaduna</option>
+                                <option>Enugu</option>
+                                <option selected>Lagos</option>
+                                <option>Osun</option>
+                              </select>
+                            </div>
+                            <div style="margin-top: 3%" class="form-group">
+                              <label for="businesscategory">Business Category</label>
+                              <select id="businesscategory" class="form-control col-10">
+                                <option>Cosmetics</option>
+                                <option>Education</option>
+                                <option>Entertainment</option>
+                                <option>Farming</option>
+                                <option>Health</option>
+                                <option>Mining</option>
+                                <option>Production</option>
+                                <option selected>Software Development</option>
+                                <option>Sports</option>
+                              </select>
+                            </div>
+                            <div style="margin-top: 25px;" class="form-group">
+                              <input type="file" value="nature" style="font-size: 15px;"/>
+                              <small class="form-text text-muted">select an image file of jpg format. The image will be your business profile photo</small>
+                            </div>
+                            <div style="margin-top: 3%;" class="form-group">
+                              <label for="businessdetails">Business Details</label>
+                              <textarea id="businessdetails" class="form-control col-10" rows="3" placeholder="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem cum optio eveniet, quae est modi provident beatae maxime magnam veniam similique quasi mollitia accusantium. Dolor provident assumenda ab facilis rem!"></textarea>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer bg-dark">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                          Close
+                        </button>
+                        <button class="btn btn-primary" type="button">Save Changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <button data-toggle="modal" data-target="#delete-business"> 
+                  <img style="width: 50px;" src="./assets/images/delete-icon.png"/>
+                </button>
+                <div class="modal fade" id="delete-business">
+                  <div class="modal-dialog" style="color: black">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3>Confirm Delete?</h3>
+                      </div>
+                      <div class="modal-body">
+                        Do you want to delete this business?
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-danger">
+                          Delete
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                          Back
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style="margin: 2%"/>
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <h3 style="color: darkcyan;">
+                  <span style="border-bottom: 3px solid darkcyan;">Reviews</span>
+                </h3>
+              </div>
+            </div>
+            <div class="row" style="margin: 2%";>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col review-body">
+                    <h3 style="color: #ff6c6c;">Andrew Okoye</h3>
+                    <p style="color: black">
+                      More work is needed
+                    </p>
+                    <small class="text-muted">1 hour ago</small>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col review-body">
+                    <h3 style="color: #ff6c6c;">Slava Couroy</h3>
+                    <p style="color: black">
+                      Your Customer service is awesome, nice job...
+                    </p>
+                    <small class="text-muted">15 minutes ago</small>
+                  </div>
+                </div>
+                <div class="row">
+                  <a role="button" href="#" class="btn btn-primary">Next Review</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer style="margin-top: 4%" class="bg-dark">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-sm-4">
+            <a href="">
+              <img style="width: 30px" src="./assets/images/facebook-icon.png"/>
+            </a>
+            <a href="">
+              <img style="width: 30px" src="./assets/images/google-icon.png"/>
+            </a>
+            <a href="">
+              <img style="width: 30px" src="./assets/images/instagram-icon.png"/>
+            </a>
+            <a href="">
+              <img style="width: 30px" src="./assets/images/twitter-icon.png"/>
+            </a>
+            <div class="row">Having any issues, reach out to us through any of our social handles.</div>
+          </div>
+          <!-- <div class="col-md-3 col-sm-4">
+            Having any issues, reach out to us through any of our social handles.
+          </div> -->
+          <div class="col-md-3 col-sm-12">
+            Policies: Terms of use
+            <br/>
+            Privacy
+          </div>
+          <div class="col-md-3 col-sm-12">
+            &copy; WEConnect 2018
+            <br/>
+            All Rights Reserved
+            <br/>
+            Designed by O.D.K @andela
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

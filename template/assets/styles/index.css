@@ -1,0 +1,42 @@
+.top-spacing {
+  margin-top: 2%;
+  padding: 5px;
+}
+.checked {
+  color: goldenrod;
+}
+h1.top-spacing {
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 5%;
+}
+a.footer {
+  color: whitesmoke;
+  text-decoration: underline;
+}
+a.btn{
+  font-size: 13px;
+}
+a:hover {
+  text-decoration: none;
+}
+button.btn, input.form-control, a, p {
+  font-size: 13px;
+}
+h3{
+  font-size: 18px;
+}
+h1 {
+  font-size: 1.75rem; 
+}
+h1, div.header>span {
+  color: whitesmoke; 
+  font-family: cursive;
+}
+div.container-fluid{
+  background-color: indigo; 
+  padding: 15px;
+}
+hr {
+  background-color: skyblue;
+}

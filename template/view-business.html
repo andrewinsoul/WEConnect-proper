@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Business Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./assets/dist/view-business.css"/>
+  </head>
+  <body>
+    <nav class="xnav navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; z-index: 1; width: 100%; top: 0;">
+      <div class="container-fluid">
+        <h3 style="color: white;" class="navbar-brand">
+          <img class="rounded-circle" src="./assets/images/weconnect-logo.png" style="width: 48px;" alt="logo"/>
+          WEconnect
+        </h3>
+        <button class="navbar-toggler" type="menu" data-toggle="collapse" aria-controls="navDropdown" aria-expanded="false" aria-label="Toggle Navigation" data-target="#Dropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end brand-anchor" id="Dropdown">
+          <ul class="navbar-nav">
+            <li>
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>            
+            <li class="dropdown active">
+              <a class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Businesses</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-link dropdown-item" href="business-catalogue.html">Business Catalogue</a>
+                <a class="dropdown-link dropdown-item" href="view-my-business.html">My Businesses</a>
+                <a class="dropdown-link dropdown-item" href="register-business.html">Register Business</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="reviews.html">Reviews</a>
+            </li>
+            <li>
+              <a class="nav-link" href="reviews.html">Profile</a>
+            </li>
+            <li>
+              <a class="nav-link" href="login.html">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid" id="business-details" style="margin-top: 9%">
+      <div class="row">
+        <div class=" col-10 offset-1">
+          <figure class="text-center" style="margin: 2%">
+            <img class="img-fluid figure-img" src="file:///C:/Users/user/Desktop/WECONNECT/template/assets/images/car%20dashboard.png"/>
+            <figcaption>
+              <span style="margin-right: 10%;">Business Info</span>
+              <span>Reviews</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 offset-1">
+          <div class="jumbotron-fluid business-details">
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <h3 style="color: darkcyan;">
+                  <span style="border-bottom: 3px solid darkcyan;">Business-Info</span>
+                </h3>
+              </div>
+            </div>
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <span style="font-weight: bold;">NAME: </span>Andy Software Corporation
+              </div>
+            </div>
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <span style="font-weight: bold;">LOCATION: </span>Lagos
+              </div>
+            </div>
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <span style="font-weight: bold;">CATEGORY: </span>TECHNOLOGY
+              </div>
+            </div>
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <span style="font-weight: bold;">DETAILS: </span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem cum optio eveniet, quae est modi provident beatae maxime magnam veniam similique quasi mollitia accusantium. Dolor provident assumenda ab facilis rem!
+              </div>
+            </div>
+            <hr style="margin: 2%"/>
+            <div class="row" style="margin: 2%;">
+              <div class="col">
+                <h3 style="color: darkcyan;">
+                  <span style="border-bottom: 3px solid darkcyan;">Reviews</span>
+                </h3>
+              </div>
+            </div>
+            <div class="row" style="margin: 2%";>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col review-body">
+                    <h5 style="color: #ff6c6c;">Andrew Okoye</h5>
+                    <p style="color: black">
+                      More work is needed
+                    </p>
+                    <small class="text-muted">1 hour ago</small>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col review-body">
+                    <h5 style="color: #ff6c6c;">Slava Couroy</h5>
+                    <p style="color: black">
+                      Your Customer service is awesome, nice job...
+                    </p>
+                    <small class="text-muted">15 minutes ago</small>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <button data-toggle="modal" data-target="#write-review" class="btn btn-primary">
+                      Add Review
+                    </button>
+                    <div class="modal fade" id="write-review">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header bg-dark">
+                            <h4 style=" color: white;">
+                              <span style="margin-right: 7cm;">Write Review</span>
+                              <button class="modal-header-btn" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span style="color: white;" class="modal-close-btn" aria-hidden="true">&times;</span>
+                              </button>
+                            </h4>
+                          </div>
+                          <div class="modal-body">
+                            <form action="">
+                              <div class="form-group row" style="margin-left: 47px">
+                                <div class="input-group row">
+                                  <div class="col-9" style="padding: 0">
+                                    <label style="font-size: 16px;" for="name">Name</label>
+                                    <input id="name" class="form-control" disabled="disabled" placeholder="Clinton"/>
+                                    <small class="form-text text-muted">
+                                      Your name cannot be edited, go to your profile settings to change it.
+                                    </small>
+                                  </div>
+                                </div>
+                                <div style="margin-top: 5%;" class="input-group row">
+                                  <div class="col-9" style="padding: 0">
+                                    <label style="font-size: 16px;" for="review">Write Review</label>
+                                    <textarea rows="4" class="form-control" placeholder="Write Review"></textarea>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer bg-dark">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button class="btn btn-primary" type="button">Post Review</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-sm-4">
+            <a href="">
+              <img style="width: 30px" src="./assets/images/facebook-icon.png"/>
+            </a>
+            <a href="">
+              <img style="width: 30px" src="./assets/images/google-icon.png"/>
+            </a>
+            <a href="">
+              <img style="width: 30px" src="./assets/images/instagram-icon.png"/>
+            </a>
+            <a href="">
+              <img style="width: 30px" src="./assets/images/twitter-icon.png"/>
+            </a>
+            <div class="row">Having any issues, reach out to us through any of our social handles.</div>
+          </div>
+          <!-- <div class="col-md-3 col-sm-4">
+            Having any issues, reach out to us through any of our social handles.
+          </div> -->
+          <div class="col-md-3 col-sm-12">
+            Policies: Terms of use
+            <br/>
+            Privacy
+          </div>
+          <div class="col-md-3 col-sm-12">
+            &copy; WEConnect 2018
+            <br/>
+            All Rights Reserved
+            <br/>
+            Designed by O.D.K @andela
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

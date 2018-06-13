@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Register Business Page</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <nav class="xnav navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container" >
+        <h3 style="color: white;" class="navbar-brand">
+          <img class="rounded-circle" src="./assets/images/weconnect-logo.png" style="width: 48px;" alt="logo"/>
+          WEconnect
+        </h3>
+        <button class="navbar-toggler" type="menu" data-toggle="collapse" aria-controls="navDropdown" aria-expanded="false" aria-label="Toggle Navigation" data-target="#Dropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end brand-anchor" id="Dropdown">
+          <ul class="navbar-nav">
+            <li>
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>            
+            <li class="dropdown active">
+              <a class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Businesses</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-link dropdown-item" href="my-business.html">My Businesses</a>
+                <a class="dropdown-link dropdown-item" href="register-business.html">Register Business</a>
+                <a class="dropdown-link dropdown-item" href="business-catalogue.html">Business Catalogue</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="reviews.html">Reviews</a>
+            </li>
+            <li>
+              <a class="nav-link" href="reviews.html">Profile</a>
+            </li>
+            <li>
+              <a class="nav-link" href="login.html">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <center style="color: white; font-style: italic"><h4>WEconnect Building a happy customer base</h4></center>
+    <div class="row">
+      <div class="col-md-6 offset-1 col-sm-11">
+        <div class="jumbotron bg-dark" style="margin-top: 1%; margin-bottom: 5%; color: black">
+          <form action="/">
+            <div class="form-group row">
+              <div class="row col signup-login">
+                <input class="form-control form-input" placeholder="Business Name"/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="row col signup-login">
+                <input class="form-control form-input" placeholder="Business Address"/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="row col signup-login">
+                <select id="businessState" class="form-control form-input">
+                  <option selected>Choose State</option>
+                  <option>Abia</option>
+                  <option>Akwa-Ibom</option>
+                  <option>Anambra</option>
+                  <option>Bauchi</option>
+                  <option>Kano</option>
+                  <option>Kaduna</option>
+                  <option>Enugu</option>
+                  <option>Lagos</option>
+                  <option>Osun</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="row col signup-login">
+                <select id="businessState" class="form-control form-input">
+                  <option selected>Choose Business Category</option>
+                  <option>Software Development</option>
+                  <option>Entertainment</option>
+                  <option>Sports</option>
+                  <option>Production</option>
+                  <option>Cosmetics</option>
+                  <option>Education</option>
+                  <option>Mining</option>
+                  <option>Farming</option>
+                  <option>Health</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="row col signup-login">
+                <input type="file" value="Upload photo" style="color: lightgray;"/>
+                <small class="text-muted form-text">only files of .jpg format are allowed</small>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="row col signup-login">
+                <textarea rows="4" class="form-control form-input" placeholder="Write a short profile of your business"></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-4">
+                <button type="submit" class="btn btn-primary">Register Business</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <img class="img-fluid" src="./assets/images/nature1.jpg"/>
+        <div class="card">
+          WEconnect your business to your customers to enhance better service delivery and help you build a happy customer base. Register your business and you automatically create an online presence for your business. Work hard towards receiving positive reviews from your clients so as to give others reading about your business the confidence to transact with you. 
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark" style="color: whitesmoke; padding: 10px;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <p>
+              Policies | Terms of Use | Privacy | Authentic Items Copyright &COPY;WEconnect Team All Rights Reserved | Designed by O.D.K @ andela
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

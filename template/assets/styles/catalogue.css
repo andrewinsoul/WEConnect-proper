@@ -1,0 +1,20 @@
+.top-spacing {
+  margin-top: 9%;
+}
+div.footer-div{
+  background-color: indigo; 
+  margin-top: 15%; 
+      padding: 2%
+}
+input.form-control, a, button.btn-primary {
+  font-size: 13px;
+} 
+a{
+  color: whitesmoke;
+}
+a:hover{
+  text-decoration: none;
+}
+td{
+  font-size: 13px;
+}

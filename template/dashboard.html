@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard Page</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./assets/dist/dashboard-style.css"/>
+  </head>
+  <body class="bg-dark" style="min-height: 800px;">
+    <nav style="position: fixed; z-index: 1; width: 100%; top: 0;" class="xnav navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <h3 style="color: white;" class="navbar-brand">
+          <img class="rounded-circle" src="./assets/images/weconnect-logo.png" style="width: 48px;" alt="logo"/>
+          WEconnect
+        </h3>
+        <button class="navbar-toggler" type="menu" data-toggle="collapse" aria-controls="navDropdown" aria-expanded="false" aria-label="Toggle Navigation" data-target="#Dropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end brand-anchor" id="Dropdown">
+          <ul class="navbar-nav">
+            <li class="active">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>            
+            <li class="dropdown">
+              <a class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Businesses</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-link dropdown-item" href="business-catalogue.html">Business Catalogue</a>
+                <a class="dropdown-link dropdown-item" href="register-business.html">Register Business</a>
+                <a class="dropdown-link dropdown-item" href="my-business.html">My Businesses</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="reviews.html">Reviews</a>
+            </li>
+            <li>
+              <a class="nav-link" href="reviews.html">Profile</a>
+            </li>
+            <li>
+              <a class="nav-link" href="login.html">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="row" style="margin-top: 6%">
+      <div class="col mx-auto">
+        <div class="jumbotron" style="background-color: white">
+          <h4 style="margin-bottom: 3%">Welcome Andy</h4>
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div class="card">
+                <img class="img-fluid" src="./assets/images/index.jpg"/>
+                <div class="card-text">
+                  WEConnect your business to your customers to ensure you have a happy customer base.
+                  <br/><hr style="background-color: blueviolet"/>
+                  <ul>
+                    <li>Register Business</li>
+                    <li>Read Reviews posted about the business you registered</li>
+                    <li>Post reviews about other businesses on the platform</li>
+                    <li>Search for a business on the catalogue page</li> 
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <h2>My Businesses</h2>
+              <!-- Your registered business appear here, you currently have no registered businesses. Quickly <a style="color: brown" href="register-business.html">register</a> a business -->
+              <div class="card">
+                <img class="img-fluid" src="./assets/images/fifty.png"/>
+                <div class="card-block" style="overflow: hidden; text-overflow: ellipsis; white-space: normal; padding: 20px;">
+                  <h3 class="card-title">Andy Entertainment Industry</h3>
+                  <h5 class="card-subtitle">Entertainment</h5>
+                  <p class="card-text">
+                    Andy Entertainment Industry funds startup movie companies as...
+                  </p>
+                  <a role="button" class="card-link btn btn-primary" href="my-business.html">View My Businesses</a> 
+              </div>
+            </div>
+              <div class="row" style="margin-top: 2%">
+                <div class="col">
+                  <h2>Notifications</h2>
+                  You currently have no new notifications
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer bg-dark">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-2 col-sm-4">
+            <a href="">
+              <img style="width: 30px" src="./assets/images/facebook-icon.png"/>
+            </a>
+            <a href="">
+              <img style="width: 30px" src="./assets/images/google-icon.png"/>
+            </a>
+            <a href="">
+              <img style="width: 30px" src="./assets/images/instagram-icon.png"/>
+            </a>
+            <a href="">
+              <img style="width: 30px" src="./assets/images/twitter-icon.png"/>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            Having any issues, reach out to us through any of our social handles.
+          </div>
+          <div class="col-md-3 col-sm-12">
+            Policies: Terms of use
+            <br/>
+            Privacy
+          </div>
+          <div class="col-md-3 col-sm-12">
+            &copy; WEConnect 2018
+            <br/>
+            All Rights Reserved
+            <br/>
+            Designed by O.D.K @andela
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+button.btn, label.col-form-label, .form-control {
+    font-size: 13px;
+}
+input.browse {
+    background-color: skyblue;
+}
+.top-spacing {
+    margin-top: 6%
+}
