@@ -28,7 +28,7 @@
     "clean": "rmdir /s /q build",
     "build-babel": "babel -d ./build ./src -s",
     "build": "npm run clean && npm run build-babel",
-    "startServer": "npm run build && node ./build/app.js",
+    "startServer": "node ./build/bin/www.js",
     "pre-localTest": "sequelize db:migrate:undo:all --env localTest && sequelize db:migrate --env localTest && cls",
     "localTest": "cross-env NODE_ENV=localTest nyc mocha ./test --compilers js:babel-core/register --timeout 15000 --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
