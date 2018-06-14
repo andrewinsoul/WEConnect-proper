@@ -30,7 +30,6 @@ export const businessHandler = {
       })
       .then(result => res.status(201).send(result))
       .catch((error) => {
-        // if (error.name === 'SequelizeValidationError') return res.status(403).send({ error: 'please upload a photo of .jpg format' });
         if (error.name === 'SequelizeForeignKeyConstraintError') return res.status(404).send({ error: 'User not found' });
         if (error.parent.detail.includes('name')) return res.status(409).send({ error: 'business name already exists' });
         if (error.parent.detail.includes('profile')) return res.status(409).send({ error: 'business profile already exists' });
